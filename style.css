@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: #060AB2;
+    display: flex;
+  }
+ 
+
+  .memory-game{
+      width: 640px;
+      height: 640px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      perspective: 1000px;
+  }
+
+  .mamory-card{
+      width: calc(25% - 10px);
+      height: calc(33.333% - 10px) ;
+      position: relative;
+      border: 2px solid black;
+      margin: 5px;
+      transform: scale(1s);
+      transform-style: preserve-3d;
+      transition: transform .5s;
+  }
+  .mamory-card :active{ 
+    transform: scale(.97);
+    transition: transform .2s ;
+
+  }
+
+  .mamory-card.flip{
+      transform: rotateY(180deg);
+  }
+  .card-front,
+  .card-back{
+      height: 100%;
+      width: 100%;
+      padding: 10px;
+      position: absolute;
+      background: cornflowerblue;
+      backface-visibility: hidden;
+  }
+  .card-front{
+    transform: rotateY(180deg);
+  }
+  button{
+      height: 20px;
+      width: 100px;
+      position: absolute;
+      bottom:-50px;
+      left:270px;
+      border: 2px solid black;
+      border-radius: 4px;
+      background-color: cornflowerblue;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+      
+  }
+  button:hover{
+      background-color: chartreuse;
+  }
+  
